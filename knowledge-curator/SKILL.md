@@ -65,7 +65,7 @@ description: 个人知识库整理 — Extract key knowledge from four source ty
 - **开头给纲领**：一句话结论 / 总览放最前（常用「0. 一句话结论」）。
 - **有总链路**：能画主流程处，用 `->` 箭头链或伪代码给出全局骨架（常用「1. 总链路」）。
 - **默认不加「常见误解 / 易错点」段**：能融进正文对应句子的就融进去。新写的笔记不要自己开这个段。
-- **流程图用 json-canvas**（`.canvas` 文件 + `[[xxx.canvas]]` 引用），文本 ASCII 图只用于线性单链。
+- **总链路与流程图用 drawio 出图**（`drawio-skill` 生成，存笔记同级 `images/`，嵌 `.drawio.svg`），文本 ASCII 图只留给三四节点的线性单链。见 `references/diagram.md`。
 - **不罗列常见文件/命令清单**；**删掉原文里的站内跳转链接与追踪参数**，只留论文/官方文档/源码外链。
 - **双链优先**：相关概念用 `[[笔记名#小节]]` 串联，宁可多链。
 - **低阅读成本、快速可习得**：去冗余，不写与理解无关的铺陈；整理后不需回看原文。新增段落密度要与相邻既有小节相当。
@@ -86,7 +86,7 @@ description: 个人知识库整理 — Extract key knowledge from four source ty
 - **不要写进指令没点名的笔记**，也不要给自己加没被要求的任务。
 - **不要把"完善一下 X"理解成"围绕 X 写一篇"**：用户说"补充 torch 的基础操作"就是几个 API 的最小说明，不是加上典型案例、实战链路、跨笔记串联。
 - 不要默认追加「常见误解 / 易错点」段落；能就近融进正文的就融进去，一处一次。
-- 不要用文本 ASCII 画多分支流程图（该用 json-canvas）。
+- 不要用文本 ASCII 画总链路或多分支流程图（该用 drawio 出图）。
 - 不要照搬原文的站内跳转链接、追踪参数、"点击查看"锚点。
 - 不要把一次具体排错原样记成案例；抽象成通用机制条目。
 - 不要把"用户的提问"或"上一轮对话"的语境带进独立知识点。
@@ -124,4 +124,5 @@ description: 个人知识库整理 — Extract key knowledge from four source ty
 - 整理完 → `references/testing.md` 自测（**a 项指令遵循对账必做**；重构场景另有专项验收准则）
 - 用户给反馈 → `references/taste-memory.md` 沉淀记忆
 - 涉及 PDF/图片/环境 → `references/toolchain.md`
-- 要画图 / 拿 Obsidian 语法 / 抓网页 → `vendor/obsidian-skills/` 下对应 skill（见上表）
+- **要画总链路图/流程图 → `references/diagram.md`**（drawio 产出格式、生成方式、验收）
+- 要拿 Obsidian 语法 / 抓网页 → `vendor/obsidian-skills/` 下对应 skill（见上表）
