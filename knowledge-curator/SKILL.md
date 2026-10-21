@@ -62,10 +62,11 @@ description: 个人知识库整理 — Extract key knowledge from four source ty
 
 ## 笔记风格铁律（详见 `references/style.md`）
 
+- **科研表达风格**：笔记默认采用科研风格，正文与绘图中均采用该风格，包括但不限于：标量变量采用小写斜体、向量变量采用小写加粗斜体、矩阵采用大写；精准表达，保证笔记的简洁和清爽；对文中出现的新变量，需明确定义新的变量及形状，笔记中同一类变量尽量采用同一个表达(论文除外，论文知识凝练类笔记中变量以论文为主)；所有技术表述必须精确、无歧义、且不含错误结论；避免含糊与不确定性。
 - **开头给纲领**：一句话结论 / 总览放最前（常用「0. 一句话结论」）。
-- **有总链路**：能画主流程处，用 `->` 箭头链或伪代码给出全局骨架（常用「1. 总链路」）。
+- **有总链路**：视笔记复杂度绘制该笔记内容大纲，格式为draw.io格式，可以采用obsidan安装的draw.io插件，并将绘图源码放置在该笔记所在目录的images目录下。（常用「1. 总链路」）。
 - **默认不加「常见误解 / 易错点」段**：能融进正文对应句子的就融进去。新写的笔记不要自己开这个段。
-- **总链路与流程图用 drawio 出图**（`drawio-skill` 生成，存笔记同级 `images/`，嵌 `.drawio.svg`），文本 ASCII 图只留给三四节点的线性单链。见 `references/diagram.md`。
+- **总链路与流程图用 drawio 出图**（存笔记同级 `images/`，嵌 `.drawio.svg`）。见 `references/diagram.md`。
 - **不罗列常见文件/命令清单**；**删掉原文里的站内跳转链接与追踪参数**，只留论文/官方文档/源码外链。
 - **双链优先**：相关概念用 `[[笔记名#小节]]` 串联，宁可多链。
 - **低阅读成本、快速可习得**：去冗余，不写与理解无关的铺陈；整理后不需回看原文。新增段落密度要与相邻既有小节相当。
@@ -112,7 +113,7 @@ description: 个人知识库整理 — Extract key knowledge from four source ty
 - **PDF**：`/d/anaconda/python` 有 PyMuPDF(fitz)，抽全文到 UTF-8 文本再读；渲染类（pdftoppm）不可用。
 - **图片 OCR**：仅公式/代码/简单示意时，先 `ollama list` 探测再用小模型转 markdown；复杂图不强行识别。
 - **检索**：联网用于困惑澄清与事实核对。
-- **环境**：base 已有的库直接用；新引入且可能常复用的库装进 `claude` conda 环境（非 base）。
+- **环境**：base 已有的库直接用；若无，则使用conda新建或复用`agent` 虚拟环境(常见非C盘)用于后续有关任务的依赖安装。
 
 ## 何时读哪个 reference
 
@@ -124,5 +125,4 @@ description: 个人知识库整理 — Extract key knowledge from four source ty
 - 整理完 → `references/testing.md` 自测（**a 项指令遵循对账必做**；重构场景另有专项验收准则）
 - 用户给反馈 → `references/taste-memory.md` 沉淀记忆
 - 涉及 PDF/图片/环境 → `references/toolchain.md`
-- **要画总链路图/流程图 → `references/diagram.md`**（drawio 产出格式、生成方式、验收）
 - 要拿 Obsidian 语法 / 抓网页 → `vendor/obsidian-skills/` 下对应 skill（见上表）
