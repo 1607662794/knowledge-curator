@@ -58,8 +58,8 @@ python -c "import sys, pymupdf; print(sys.executable); print(pymupdf.VersionBind
 
 指令示例：
 
-![example_2](examples\example_2.png)
+![example_2](examples/example_2.png)
 
 笔记成品样例如下：
 
-![example_1](examples\example_1.png)
+![example_1](examples/example_1.png)
